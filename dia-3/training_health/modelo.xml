@@ -1,10 +1,18 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+
         <record model="ir.ui.view" id="professional_view_form">
             <field name="model">training_health.professional</field>
             <field name="type">form</field>
             <field name="name">professional_form</field>
         </record>
+
+        <record model="ir.ui.view" id="patient_view_form">
+            <field name="model">training_health.patient</field>
+            <field name="type">form</field>
+            <field name="name">patient_form</field>
+        </record>
+
     </data>
 </tryton>
