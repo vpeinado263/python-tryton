@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form>
+    <label name="name"/>
+    <field name="name"/>
+
+    <label name="license_number"/>
+    <field name="license_number"/>
+
+    <label name="specialty"/>
+    <field name="specialty"/>
+
+    <label name="state"/>
+    <field name="state"/>
+
+    <label name="entry_date"/>
+    <field name="entry_date"/>
+</form>
