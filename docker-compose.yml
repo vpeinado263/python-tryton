@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: tryton-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tryton
+      POSTGRES_PASSWORD: tryton
+      POSTGRES_DB: tryton
+    ports:
+      - "5432:5432"
+    volumes:
+      - tryton_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  tryton_postgres_data:
