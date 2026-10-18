@@ -3,14 +3,25 @@ services:
     image: postgres:16
     container_name: tryton-postgres
     restart: unless-stopped
+
     environment:
-      POSTGRES_USER: tryton
-      POSTGRES_PASSWORD: tryton
-      POSTGRES_DB: tryton
+      POSTGRES_USER: ${POSTGRES_USER:-tryton}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Defini POSTGRES_PASSWORD en .env}
+      POSTGRES_DB: ${POSTGRES_DB:-tryton}
+
     ports:
-      - "5432:5432"
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+
     volumes:
       - tryton_postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pg_isready -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
 volumes:
   tryton_postgres_data:

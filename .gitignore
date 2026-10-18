@@ -1,4 +1,17 @@
+# Variables y secretos locales
+.env
+.env.*
+!.env.example
+trytond.conf
+
+# Python
 .venv/
 __pycache__/
+*.py[cod]
 *.pyc
 *.egg-info/
+
+# Archivos temporales
+*.log
+.DS_Store
+Thumbs.db
