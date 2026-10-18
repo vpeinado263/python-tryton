@@ -1,6 +1,5 @@
 
 -- ACTIVIDAD 1: PRIMERAS CONSULTAS
--- Base de datos ficticia de prácticas.
 -- Tabla utilizada: pacientes.
 
 -- 1. Mostrar todos los registros de pacientes.
