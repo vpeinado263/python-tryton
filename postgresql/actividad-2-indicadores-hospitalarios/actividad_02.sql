@@ -67,7 +67,7 @@ GROUP BY DATE_TRUNC('month', fecha_consulta)
 ORDER BY mes;
 
 
--- 6. Mostrar especialidades que superan una cantidad
+-- 6. Mostrar especialidades que superan una cantidad determinada de consultas, HAVING filtra los grupos después de calcular COUNT.
 
 SELECT
     p.especialidad,
